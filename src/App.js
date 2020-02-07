@@ -1,6 +1,7 @@
 import React from "react";
 import Timer from "./Components/Timer";
-import './App.css';
+import Box from "./Components/Box";
+import './Styles/App.css';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         Some people drink alcohol because it helps them relax. If you feel the
         need to relax, try square breathing instead.
       </h1>
+      <Box />
       <Timer />
       <h3>
         Square breathing is a simple relaxation technique that promotes

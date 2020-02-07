@@ -14,7 +14,7 @@ export default class Timer extends React.Component {
           seconds: seconds - 1
         }));
       }
-      if (seconds === 0) {
+      if (seconds === 1) {
         this.setState(() => ({
           seconds: 4
         }));
