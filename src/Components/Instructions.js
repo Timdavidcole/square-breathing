@@ -1,7 +1,7 @@
 import React from "react";
-import '../Styles/Timer.css';
+import "../Styles/Instructions.css";
 
-export default class Timer extends React.Component {
+export default class Instructions extends React.Component {
   state = {
     seconds: 4
   };
@@ -20,19 +20,25 @@ export default class Timer extends React.Component {
           seconds: 4
         }));
       }
-    }, 1000);
+    }, 4000);
   }
 
   componentWillUnmount() {
     clearInterval(this.myInterval);
   }
 
-  render() {
+  this.instructionChooser() {
     const { seconds } = this.state;
-    return (
-      <div className= "timer">
-          <h1>{seconds}</h1>
-      </div>
-    );
+    if (seconds === 4) {
+      return <h1>Breath in</h1>;
+    } else if (seconds === 2) {
+      return <h1>Breath out</h1>;
+    } else {
+      return <h1>Hold</h1>;
+    }
+  }
+
+  render() {
+    return <div className="Instructions">{this.instructionChooser} </div>;
   }
 }

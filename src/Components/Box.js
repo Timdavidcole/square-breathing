@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/Box.css";
 import Timer from "./Timer";
+import Instructions from "./Instructions";
 
 
 export default class Box extends React.Component {
@@ -9,6 +10,7 @@ export default class Box extends React.Component {
       <div className="box-container">
         <div className="box-main"></div>
         <div className="box-white"></div>
+        <Instructions/>
         <Timer/>
       </div>
     );

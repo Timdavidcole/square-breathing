@@ -1,7 +1,33 @@
 .timer {
-    border: 1px dotted black
+    position: relative;
+    top: 22%;
 }
 
 .timer h1 {
-    font-size: 30px;
+    font-size: 80px;
+    text-align: center;
+    color: #34d0eb;
+    animation: text-color 16s infinite;
+}
+
+@keyframes text-color {
+    0% {
+        color: #34d0eb;
+    }
+
+    25% {
+        color: #343aeb;
+    }
+
+    50% {
+        color: #343aeb;
+    }
+
+    75% {
+        color: #34d0eb;
+    }
+
+    100% {
+        color: #34d0eb;
+    }
 }
