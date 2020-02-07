@@ -2,9 +2,15 @@ import React from "react";
 import "../Styles/Instructions.css";
 
 export default class Instructions extends React.Component {
-  state = {
-    seconds: 4
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      seconds: 4
+    };
+
+    this.instructionChooser = this.instructionChooser.bind(this);
+  }
 
   componentDidMount() {
     this.myInterval = setInterval(() => {
@@ -27,18 +33,18 @@ export default class Instructions extends React.Component {
     clearInterval(this.myInterval);
   }
 
-  this.instructionChooser() {
+  instructionChooser() {
     const { seconds } = this.state;
     if (seconds === 4) {
-      return <h1>Breath in</h1>;
+      return <h2>Breath in</h2>;
     } else if (seconds === 2) {
-      return <h1>Breath out</h1>;
+      return <h2>Breath out</h2>;
     } else {
-      return <h1>Hold</h1>;
+      return <h2>Hold</h2>;
     }
   }
 
   render() {
-    return <div className="Instructions">{this.instructionChooser} </div>;
+    return <div className="instructions">{this.instructionChooser()} </div>;
   }
 }
