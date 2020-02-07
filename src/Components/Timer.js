@@ -1,4 +1,5 @@
 import React from "react";
+import '../Styles/Timer.css';
 
 export default class Timer extends React.Component {
   state = {
@@ -29,7 +30,7 @@ export default class Timer extends React.Component {
   render() {
     const { seconds } = this.state;
     return (
-      <div>
+      <div classname= "timer">
           <h1>{seconds}</h1>
       </div>
     );

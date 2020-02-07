@@ -1,11 +1,15 @@
 import React from "react";
-import '../Styles/Box.css';
+import "../Styles/Box.css";
+import Timer from "./Timer";
 
-export default class Timer extends React.Component {
 
+export default class Box extends React.Component {
   render() {
     return (
-      <div className="box">
+      <div className="box-container">
+        <div className="box-main"></div>
+        <div className="box-white"></div>
+        <Timer/>
       </div>
     );
   }
