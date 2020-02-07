@@ -1,3 +1,11 @@
 body {
   font-family: "Verdana", Verdana, sans-serif;
+  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.87)
+}
+
+.text-box {
+  width: 35%;
+  background-color: #2757a4;
+  padding: 15px;
 }
