@@ -5,14 +5,15 @@ import "./Styles/App.css";
 function App() {
   return (
     <div>
-      <div className="text-box">
-        <span>
-          Some people drink alcohol because it helps them relax. If you feel the
-          need to relax, try square breathing instead.
-        </span>
+      <div style={{ width: "100%" }}>
+        <div className="text-box">
+          <span>
+            Some people drink alcohol because it helps them relax. If you feel
+            the need to relax, try square breathing instead.
+          </span>
+        </div>
       </div>
-      <Box />
-      <div className="text-box">
+      <div className="text-box" style={{ top: "100px" }}>
         <span>
           Square breathing is a simple relaxation technique that promotes
           measured, mindful breathing. The idea is:
@@ -25,6 +26,7 @@ function App() {
           <li>Repeat at least four times</li>
         </ul>
       </div>
+      <Box />
     </div>
   );
 }
