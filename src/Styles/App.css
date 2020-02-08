@@ -16,6 +16,7 @@ body {
   background-color: #2757a4;
   padding: 25px;
   margin: 25px;
+  margin-right: 0;
   animation: fade-in 2s;
   border-radius: 10px;
 }
@@ -24,6 +25,7 @@ body {
   background-color: #2757a4;
   padding: 25px;
   margin: 25px;
+  margin-right: 0;
   animation: fade-in 2s;
   animation-delay: 4s;
   animation-fill-mode: both;
