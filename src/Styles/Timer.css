@@ -1,6 +1,6 @@
 .timer {
     position: absolute;
-    top: 22%;
+    top: 16%;
     width: 100%;
     margin: 5px;
 }
@@ -9,7 +9,7 @@
     font-size: 80px;
     text-align: center;
     color: #34d0eb;
-    animation: text-color 16s infinite;
+    animation: text-color 16s infinite, fade-out 1s infinite;
 }
 
 @keyframes text-color {
@@ -31,5 +31,19 @@
 
     100% {
         color: #34d0eb;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

@@ -5,6 +5,14 @@ import Instructions from "./Instructions";
 
 
 export default class Box extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pageLoaded: false
+    };
+  }
+  
   render() {
     return (
       <div className="box-container">

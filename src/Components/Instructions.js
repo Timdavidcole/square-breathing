@@ -6,24 +6,35 @@ export default class Instructions extends React.Component {
     super(props);
 
     this.state = {
-      seconds: 4
+      interval: 4,
+      getReady: true
     };
 
     this.instructionChooser = this.instructionChooser.bind(this);
+    this.timer = this.timer.bind(this);
+    this.start = this.start.bind(this);
   }
 
   componentDidMount() {
-    this.myInterval = setInterval(() => {
-      const { seconds } = this.state;
+    setTimeout(this.start, 12000);
+    setTimeout(this.timer, 12000);
+  }
 
-      if (seconds > 0) {
-        this.setState(({ seconds }) => ({
-          seconds: seconds - 1
+  start() {
+    this.setState({ getReady: false })
+  }
+
+  timer() {
+    setInterval(() => {
+      const { interval } = this.state;
+      if (interval > 0) {
+        this.setState(({ interval }) => ({
+          interval: interval - 1
         }));
       }
-      if (seconds === 1) {
+      if (interval === 1) {
         this.setState(() => ({
-          seconds: 4
+          interval: 4
         }));
       }
     }, 4000);
@@ -34,11 +45,13 @@ export default class Instructions extends React.Component {
   }
 
   instructionChooser() {
-    const { seconds } = this.state;
-    if (seconds === 4) {
-      return <h2>Breath in</h2>;
-    } else if (seconds === 2) {
-      return <h2>Breath out</h2>;
+    const { interval, getReady } = this.state;
+    if (getReady) {
+      return <h2>Get ready...</h2>;
+    } else if (interval === 4) {
+      return <h2>Breathe in</h2>;
+    } else if (interval === 2) {
+      return <h2>Breathe out</h2>;
     } else {
       return <h2>Hold</h2>;
     }

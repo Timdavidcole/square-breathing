@@ -1,11 +1,25 @@
 .box-container {
+    display: inline-block;
     position: relative;
-    width: 330px;
-    height: 330px;
-    top: 40%;
-    left: 40%;
+    width: 297px;
+    height: 297px;
     background-color: white;
     border-radius: 10px;
+    animation: fade-in 2s;
+    animation-delay: 8s;
+    animation-fill-mode: both;
+    margin: 25px;
+    margin-left: 0;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .box-main {
@@ -16,10 +30,10 @@
     position: absolute;
     z-index: 3;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to right, #34d0eb 0%, #2757a4 100%),
-        linear-gradient(to bottom, #2757a4 0%, #2757a4 100%),
-        linear-gradient(to right, #34d0eb 0%, #2757a4 100%),
-        linear-gradient(to bottom, #34d0eb 0%, #34d0eb 100%);
+    background-image: linear-gradient(to right, #2757a4 0%, #2757a4 100%),
+        linear-gradient(to bottom, #2757a4 0%, #34d0eb 100%),
+        linear-gradient(to right, #34d0eb 0%, #34d0eb 100%),
+        linear-gradient(to bottom, #2757a4 0%, #34d0eb 100%);
     background-size: 100% 10px,
         10px 100%,
         100% 10px,
@@ -31,6 +45,7 @@
     animation: appear-box 16s infinite;
     animation-timing-function: ease;
     animation-play-state: running;
+    animation-delay: 12s;
     animation-fill-mode: backwards;
 }
 
@@ -56,6 +71,7 @@
         0 100%;
     animation: disappear-box 16s infinite;
     animation-timing-function: ease;
+    animation-delay: 12s;
     animation-play-state: running;
     animation-fill-mode: backwards;
 }
@@ -69,31 +85,31 @@
     }
 
     25% {
-        background-size: 100% 10px,
+        background-size: 0 10px,
             10px 0,
             0 10px,
-            10px 0;
+            10px 100%;
     }
 
     50% {
         background-size: 100% 10px,
-            10px 100%,
+            10px 0,
             0 10px,
-            10px 0;
+            10px 100%;
     }
 
     75% {
         background-size: 100% 10px,
             10px 100%,
-            100% 10px,
+            0 10px,
             10px 0;
     }
 
     100% {
-        background-size: 100% 10px,
+        background-size: 0 10px,
             10px 100%,
             100% 10px,
-            10px 100%;
+            10px 0;
     }
 }
 
@@ -106,30 +122,30 @@
     }
 
     25% {
-        background-size: 0% 12px,
+        background-size: 0 12px,
             12px 0,
             0 12px,
-            12px 96.35%;
+            12px 0;
     }
 
     50% {
-        background-size: 96.35% 12px,
+        background-size: 0 12px,
             12px 0%,
             0 12px,
-            12px 0;
+            12px 100%;
     }
 
     75% {
-        background-size: 96.35% 12px,
-            12px 96.35%,
+        background-size: 100% 12px,
+            12px 0,
             0% 12px,
-            12px 0;
+            12px 100%;
     }
 
     100% {
-        background-size: 96.35% 12px,
-            12px 96.35%,
-            96.85% 12px,
+        background-size: 100% 12px,
+            12px 100%,
+            0 12px,
             12px 0%;
     }
 }
