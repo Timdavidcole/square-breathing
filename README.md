@@ -4,6 +4,8 @@ Very simple single page app for a tech test I received.
 
 You can check it out here. https://square-breathing.herokuapp.com/
 
+**Warning may take a while to boot up page**
+
 ## Tech Stack
 
 - React
