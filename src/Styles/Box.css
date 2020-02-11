@@ -31,12 +31,12 @@
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, #2757a4 0%, #2757a4 100%),
         linear-gradient(to bottom, #2757a4 0%, #34d0eb 100%),
-        linear-gradient(to right, #34d0eb 0%, #34d0eb 100%),
-        linear-gradient(to bottom, #2757a4 0%, #34d0eb 100%);
-    background-size: 100% 10px,
-        10px 100%,
-        100% 10px,
-        10px 100%;
+        linear-gradient(to left, #34d0eb 0%, #34d0eb 100%),
+        linear-gradient(to top, #34d0eb 0%, #2757a4 100%);
+    background-size: 96% 10px,
+        10px 96%,
+        96% 10px,
+        10px 96%;
     background-position: 0 0,
         100% 0,
         100% 100%,
@@ -49,23 +49,23 @@
 }
 
 .box-white {
-    width: 95%;
-    height: 95%;
-    top: 2.5%;
-    left: 2.5%;
+    width: 96%;
+    height: 96%;
+    top: 2%;
+    left: 2.3%;
     position: absolute;
     z-index: 5;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to right, white 0%, white 100%),
-        linear-gradient(to bottom, white 0%, white 100%),
-        linear-gradient(to right, white 0%, white 100%),
-        linear-gradient(to bottom, white 0%, white 100%);
+    background-image: linear-gradient(to right, white 100%, white 100%),
+        linear-gradient(to bottom, white 100%, white 100%),
+        linear-gradient(to left, white 100%, white 100%),
+        linear-gradient(to top, white 100%, white 100%);
     background-size: 100% 12px,
         12px 100%,
         100% 12px,
         12px 100%;
     background-position: 0 0,
-        100% 0,
+        99.5% 0,
         100% 100%,
         0 100%;
     animation: disappear-box 16s infinite;
@@ -114,8 +114,15 @@
 
 @keyframes disappear-box {
     0% {
-        background-size: 0 12px,
+        background-size: 100% 12px,
             12px 0,
+            0 12px,
+            12px 0;
+    }
+
+    5% {
+        background-size: 100% 12px,
+            12px 20%,
             0 12px,
             12px 0;
     }
@@ -127,17 +134,38 @@
             12px 0;
     }
 
+    30% {
+        background-size: 0 12px,
+            12px 100%,
+            20% 12px,
+            12px 0;
+    }
+
     50% {
         background-size: 0 12px,
-            12px 0%,
+            12px 0,
             100% 12px,
             12px 0;
+    }
+
+    55% {
+        background-size: 0 12px,
+            12px 0,
+            100% 12px,
+            12px 20%;
     }
 
     75% {
         background-size: 0 12px,
             12px 0,
-            100% 12px,
+            0 12px,
+            12px 100%;
+    }
+
+    80% {
+        background-size: 20% 12px,
+            12px 0,
+            0 12px,
             12px 100%;
     }
 
@@ -145,6 +173,6 @@
         background-size: 100% 12px,
             12px 0,
             0 12px,
-            12px 100%;
+            12px 0;
     }
 }
