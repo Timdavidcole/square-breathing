@@ -1,0 +1,57 @@
+.stage-completed-text {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    margin: 5px;
+}
+
+.stage-completed-text h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #34d0eb;
+    animation: text-color 16s infinite, fade-in-fade-out 16s infinite;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.543);
+}
+
+.stage-completed-text h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #34d0eb;
+    animation: text-color 16s infinite, fade-in-fade-out 16s infinite;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.543);
+    padding: 5px;
+}
+
+@keyframes text-color {
+    0% {
+        color: #34d0eb;
+        text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.687);
+    }
+
+    25% {
+        color: #2757a4;
+        text-shadow: 0px 5px 6px rgba(108, 108, 108, 0.77);
+    }
+
+    50% {
+        color: #2757a4;
+        text-shadow: 0px 5px 6px rgba(108, 108, 108, 0.77);
+    }
+
+    75% {
+        color: #34d0eb;
+        text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.687);
+    }
+
+    100% {
+        color: #34d0eb;
+        text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.687);
+    }
+}
+
+@keyframes fade-in-fade-out {
+    0%   { opacity:0; }
+    10%  { opacity:1; }
+    90%  { opacity:1; }
+    100% { opacity:0; }
+  }

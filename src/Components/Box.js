@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/Box.css";
 import Timer from "./Timer";
 import Instructions from "./Instructions";
+import StageCompleted from "./StageCompleted";
 
 
 export default class Box extends React.Component {
@@ -20,6 +21,7 @@ export default class Box extends React.Component {
         <div className="box-white"></div>
         <Instructions/>
         <Timer/>
+        <StageCompleted/>
       </div>
     );
   }
