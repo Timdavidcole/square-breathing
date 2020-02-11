@@ -1,6 +1,6 @@
 # Square Breathing Helper
 
-Very simple single page app for a tech test I received.
+Fairly simple single page app for a tech test I received.  Spent most of my time working on the box animation, which is a combination of CSS and Javascript.
 
 You can check it out here. https://square-breathing.herokuapp.com/
 
