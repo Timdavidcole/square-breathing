@@ -32,9 +32,12 @@
     ]
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^4.1.1",
     "cypress": "^4.0.1",
     "cypress-react-unit-test": "^2.4.3",
     "eslint-plugin-cypress": "^2.9.0",
+    "ignore-loader": "^0.1.2",
+    "ignore-styles": "^5.0.1",
     "react-test-renderer": "^16.12.0",
     "wait-on": "^4.0.0"
   }
