@@ -6,7 +6,7 @@ workflows:
   push:
     jobs:
       - react/install
-      - run: jest
+      - run: 'jest'
       - cypress/install:
           build: 'npm install'
       - cypress/run:
