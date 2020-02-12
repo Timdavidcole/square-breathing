@@ -9,7 +9,8 @@ You can check it out here. https://square-breathing.herokuapp.com/
 ## Tech Stack
 
 - React
-- Cypress (for testing)
+- Cypress (for feature testing)
+- Jest (for unit testing)
 - CircleCI (for CI)
 - Heroku (for deployment)
 
